@@ -7,7 +7,7 @@
 
 <p align="center">
   <a href="https://claimguardai.netlify.app/">🌐 Live Demo</a> &nbsp;·&nbsp;
-    <em>Built with React · TypeScript · Tailwind CSS · Supabase</em>
+  <em>Built with React · TypeScript · Tailwind CSS · Mini Supabase</em>
 </p>
 
 ---
@@ -15,44 +15,6 @@
 ## ✨ Overview
 
 ClaimGuard AI is a real-time, intelligent insurance claims management platform that automates the entire lifecycle — from **First Notice of Loss (FNOL)** to **fraud investigation** — using AI-powered risk scoring, voice-to-form automation, and an enterprise-grade notification pipeline.
-
----
-
-## 🔧 Connect to Your Supabase Project
-
-1. Create a Supabase project in your Supabase dashboard.
-2. Update `.env` with your project values:
-    - `VITE_SUPABASE_PROJECT_ID`
-    - `VITE_SUPABASE_URL`
-    - `VITE_SUPABASE_PUBLISHABLE_KEY` (anon key)
-3. In `supabase/config.toml`, set `project_id` to your Supabase project ref.
-4. Link and deploy backend resources:
-    - `supabase login`
-    - `supabase link --project-ref <your-project-ref>`
-    - `supabase db push`
-    - `supabase functions deploy --all`
-5. Start the app:
-    - `npm install`
-    - `npm run dev`
-
-## 🔐 Edge Function Secrets
-
-Set these secrets in your Supabase project before using AI/email/voice features:
-
-- `GEMINI_API_KEY` (preferred AI key)
-- `LOVABLE_API_KEY` (legacy fallback, optional if `GEMINI_API_KEY` is set)
-- `ELEVENLABS_API_KEY` (voice transcription)
-- `RESEND_API_KEY` (email notifications)
-- `SLACK_API_KEY` (SLA Slack escalation connector)
-
-You can set them with Supabase CLI:
-
-- `npx supabase secrets set GEMINI_API_KEY=...`
-- `npx supabase secrets set ELEVENLABS_API_KEY=...`
-- `npx supabase secrets set RESEND_API_KEY=...`
-- `npx supabase secrets set SLACK_API_KEY=...`
-
-`SUPABASE_URL` and `SUPABASE_SERVICE_ROLE_KEY` are automatically available in Supabase Edge Functions.
 
 ---
 
